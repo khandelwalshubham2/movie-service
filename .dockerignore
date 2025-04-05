@@ -1,0 +1,29 @@
+# Node modules are installed inside the Docker container, so no need to copy them
+node_modules/
+
+# Logs directory (if you have one) should be ignored
+logs/
+
+# Temporary files or caches created by the app
+*.log
+*.tmp
+*.swp
+
+# Environment variables and configuration files that are sensitive or environment-specific
+.env
+
+# Build or output directories, if any
+dist/
+build/
+
+# Operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Git-related files (if using Git for version control)
+.git
+.gitignore
+
+# Docker-related files
+docker-compose.yml
+Dockerfile

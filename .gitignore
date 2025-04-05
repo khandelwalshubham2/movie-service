@@ -1,0 +1,49 @@
+# Node.js modules
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+jspm_packages/
+
+# Build output
+dist/
+build/
+public/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE or editor directories
+.vscode/
+.idea/
+*.swp
+
+# Optional npm cache directory
+.npm/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Next.js build output
+.next/
+
+# Nuxt.js build output
+.nuxt/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Pnpm store
+.pnpm-store/
