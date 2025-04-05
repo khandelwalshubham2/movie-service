@@ -34,13 +34,13 @@ pipeline {
         sh "[ -d pipeline ] || mkdir pipeline"
         dir("pipeline") {
           // Add your jenkins automation url to url field
-          git branch: 'main', credentialsId: 'github', url: ''
+          git branch: 'main', credentialsId: 'github', url: 'https://github.com/khandelwalshubham2/jenkins-common'
           script {
             groovyMethods = load("functions.groovy")
           }
         }
         // Add your chat review url to url field
-        git branch: 'main', credentialsId: 'github', url: ''
+        git branch: 'main', credentialsId: 'github', url: 'https://github.com/khandelwalshubham2/movie-service'
         sh 'npm install'
       }
     }
