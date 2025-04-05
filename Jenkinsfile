@@ -66,7 +66,7 @@ pipeline {
 
     stage("Create New Pods") {
       steps {
-        withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: '', namespace: '', serverUrl: '']]) {
+        withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s-token', namespace: '', serverUrl: '']]) {
           script {
             def pods = groovyMethods.findPodsFromName("${namespace}", "${serviceName}")
             for (podName in pods) {
