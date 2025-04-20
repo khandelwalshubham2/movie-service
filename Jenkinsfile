@@ -37,9 +37,12 @@ pipeline {
 
      stage("Build and Push") {
       steps {
-        sh """
-      echo \$DOCKERHUB_CREDENTIALS_PSW | docker login -u \$DOCKERHUB_CREDENTIAL_USR --password-stdin
-    """
+        withCredentials([usernamePassword(credentialsId: 'docker', usernameVariable: 'DOCKERHUB_CREDENTIAL_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSW')]) {
+          // Docker login using the credentials
+          sh """
+            echo \$DOCKERHUB_CREDENTIALS_PSW | docker login -u \$DOCKERHUB_CREDENTIAL_USR --password-stdin
+          """
+        }
         sh "docker build -t $IMAGE_NAME ."
         sh "docker tag $IMAGE_NAME $IMAGE_NAME:$IMAGE_TAG"
         sh "docker tag $IMAGE_NAME $IMAGE_NAME:stable"
