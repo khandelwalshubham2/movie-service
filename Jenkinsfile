@@ -6,7 +6,7 @@ pipeline {
 
 
   environment {
-    DOCKER_CREDENTIALS = credentials("docker")
+    DOCKERHUB_CREDENTIAL = credentials("docker")
     IMAGE_NAME = "khandelwalshubham2/movie"
     IMAGE_TAG = "stable-${BUILD_NUMBER}"
     NAMESPACE = "production"
