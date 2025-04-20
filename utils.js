@@ -19,6 +19,11 @@ export const movies = [
   { id: 8, moviename: "Fight Club", length: 139, releaseyear: 1999 },
   { id: 9, moviename: "The Matrix", length: 136, releaseyear: 1999 },
   { id: 10, moviename: "Interstellar", length: 169, releaseyear: 2014 },
+  { id: 11, moviename: "Gladiator", length: 155, releaseyear: 2000 },
+  { id: 12, moviename: "The Green Mile", length: 189, releaseyear: 1999 },
+  { id: 13, moviename: "The Prestige", length: 130, releaseyear: 2006 },
+  { id: 14, moviename: "Whiplash", length: 106, releaseyear: 2014 },
+  { id: 15, moviename: "Parasite", length: 132, releaseyear: 2019 },
 ];
 
 const generateRandomTime = () => {
