@@ -50,6 +50,17 @@ pipeline {
         sh "docker push $IMAGE_NAME:stable"
       }
     }
+    stage('Check Pods in Production') {
+      steps {
+        withKubeCredentials(kubectlCredentials: [[
+          credentialsId: 'k8s-token',
+          serverUrl: 'https://kubernetes.docker.internal:6443',
+          clusterName: '',
+          contextName: ''
+        ]]) {
+          sh 'kubectl delete pods -l app=app-movie -n production'
+        }
+      }
   }
 
   post {
